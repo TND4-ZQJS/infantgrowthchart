@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Agent Growth Tool</title>
+    <style>
+        /* Apple style CSS provided by the user */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 50px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align content to the left within the container */
+        }
+        h1, h2 {
+            text-align: center;
+            color: #1d1d1f;
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        input[type="date"], input[type="number"], select {
+            padding: 12px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: calc(100% - 24px); /* Full width minus padding */
+            font-size: 16px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        button {
+            background: #0071e3;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            transition: all 0.2s ease;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+        #result {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            white-space: pre-wrap; /* To display line breaks from JS */
+        }
+
+        /* Focus styles for inputs and selects (Apple style) */
+        input:focus, select:focus {
+            border-color: #0071e3;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.25);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Child Growth Percentile Tool</h1>
+    <form id="growthForm">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option value="boy">Boy</option>
+            <option value="girl">Girl</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label for="measurementDate">Date of Measurement:</label>
+        <input type="date" id="measurementDate" required>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" step="0.01" required>
+
+        <label for="length">Length (cm):</label>
+        <input type="number" id="length" step="0.1" required>
+
+        <button type="submit">Calculate Percentile</button>
+    </form>
+    
+    <div id="result"></div>
+</div>
