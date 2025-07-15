@@ -16,7 +16,7 @@ async function calculatePercentiles() {
   const ageMonths = Math.floor(ageDays / 30.44);
 
   const useWeeks = ageWeeks <= 13;
-  const age = useWeeks ? ageWeeks : ageMonths;
+  const age = useWeeks ? Math.round(ageWeeks) : Math.round(ageMonths);
 
   const file = `data/${gender}_${useWeeks ? "0_13" : "0_24"}.json`;
 
