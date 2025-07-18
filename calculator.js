@@ -17,7 +17,8 @@ document.getElementById("calculate").addEventListener("click", async function ()
 
   const useWeeks = ageWeeks <= 13;
   const age = useWeeks ? Math.round(ageWeeks) : Math.round(ageMonths);
-  const file = `data/${gender}_${useWeeks ? "0_13" : "0_24"}.json`;
+  const genderPrefix = gender === "boy" ? "boys" : "girls";
+  const file = `data/${genderPrefix}_${useWeeks ? "0_13" : "0_24"}.json`;
 
   try {
     console.log("Fetching file:", file);
