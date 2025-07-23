@@ -54,4 +54,14 @@ button, input, select {
   input, select, button {
     width: 100%;
   }
+  #result {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  max-width: 400px;
+  margin: 20px auto;
+  line-height: 1.5;
+}
 }
