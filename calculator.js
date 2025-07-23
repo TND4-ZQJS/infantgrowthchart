@@ -61,8 +61,8 @@ document.getElementById("calculate").addEventListener("click", async function ()
     const percentileWeight = zToPercentile(zWeight);
     const percentileLength = zToPercentile(zLength);
 
-    const conclusion = (percentileWeight >= 3 && percentileWeight <= 97 &&
-                        percentileLength >= 3 && percentileLength <= 97
+    const conclusion = (percentileWeight >= 03 && percentileWeight <= 97 &&
+                        percentileLength >= 03 && percentileLength <= 97
                       ? "Standard"
                       : "May need further underwriting requirements";
 
